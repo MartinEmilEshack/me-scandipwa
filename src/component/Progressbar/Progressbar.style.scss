@@ -1,0 +1,71 @@
+:root {
+	--finished-steps-color: var(--primary-base-color);
+	--finished-steps-text-color: var(--secondary-light-color);
+	--non-finished-steps-color: var(--secondary-dark-color);
+	--non-finished-steps-text-color: $black;
+}
+
+.Progressbar {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--breadcrumbs-background);
+
+	.ProgressStep {
+		height: 100%;
+		flex: 1 5 100%;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.EdgeProgressStep {
+		height: 100%;
+		flex: 3 4 100%;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.StepBar {
+		height: 5px;
+		flex: 1 1 100%;
+		background-color: var(--finished-steps-color);
+	}
+
+	.Counter {
+		margin: 10px;
+		height: 30px;
+		flex: 0 0 30px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		font-weight: bold;
+		color: var(--finished-steps-text-color);
+
+		border-radius: 50%;
+		background: var(--finished-steps-color);
+	}
+
+	.Title {
+		position: absolute;
+		bottom: -20px;
+
+		color: $black;
+		font-weight: bold;
+	}
+
+	.NonFinished {
+		background-color: var(--non-finished-steps-color);
+		color: var(--non-finished-steps-text-color);
+	}
+}
